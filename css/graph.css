@@ -1,0 +1,19 @@
+.numbers{
+    font: 30px bold;
+    margin-top: 20px;
+}
+
+.inputs{
+    margin: 20px 0;
+}
+
+.input{
+    float: right;
+    width: 50px;
+}
+
+.graphFrame{
+    background-color: #008c8c;
+    height: 800px;
+    margin-top: 50px;
+}
