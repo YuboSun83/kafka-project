@@ -33,15 +33,16 @@ body, html{
     background-color: #282828;
   }
   
-  a{
+  .item{
     text-align: center;
     color: #ffffff;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
+    cursor: pointer;
   }
   
-  a:hover{
+  .item:hover{
     color: #ffffff9b;
     transition: 0.5s;
   }
