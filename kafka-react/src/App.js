@@ -1,19 +1,26 @@
 import './App.css';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import Navigator from './components/Navigator';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+import Nav from './components/Nav';
 import Welcome from './components/Welcome';
+import Animitions from './components/Animitions';
+import About from './components/About';
 
 function App() {
   return (
-    <div>
-      <Router>
-        <div>
-          <Navigator />
-          <Welcome />
-        </div>
-      </Router>
-    </div>
     
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/animations" element={<Animitions />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
