@@ -12,7 +12,7 @@ class Navigator extends Component {
                     <nav>
                         <ul className="items">
                             <li className="list"><Link to="/" className='item'>Home</Link></li>
-                            <li className="list"><Link to="/animitions" className='item'>Graphic Demonstration</Link></li>
+                            <li className="list"><Link to="/animations" className='item'>Graphic Demonstration</Link></li>
                             <li className="list"><Link to="/about" className='item'>About Us</Link></li>
                         </ul>
                     </nav>

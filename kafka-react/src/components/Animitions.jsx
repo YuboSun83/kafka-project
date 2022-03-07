@@ -4,7 +4,7 @@ class Animitions extends Component {
     render() {
         return (
             <div>
-                Missing SO Far...
+                <h1>Coming Soon...</h1>
             </div>
         );
     }
