@@ -21,7 +21,7 @@ class About extends Component {
                     <li className='about-list'>
                         <div className='info'>
                             <img src={require('../images/luwan.jpg')} alt="" className='about-image'/>
-                            <div className='name'>Lin Dai</div>
+                            <div className='name'>Li Dai</div>
                         </div>
                     </li>
                 </ul>
