@@ -46,5 +46,26 @@ h1{
   color: #ffffff9b;
   transition: 0.5s;
 }
-  
-  
+
+.second_items{
+  color: #fff;
+  list-style-type: none;
+  display: none;
+  position: absolute;
+  background-color: #282828;
+  padding: 0 20px;
+  margin-top: 10px;
+}
+.second_item{
+  margin: 20px 0;
+}
+
+.second_item:hover{
+  color: #ffffff9b;
+  /* text-decoration: underline; */
+  transition: 0.2s;
+}
+
+.item:hover .second_items{
+  display: block;
+} 
