@@ -7,8 +7,20 @@ class Producer extends Component {
     constructor(props){
         super(props);
         this.state = {
-            display: false
+            display: false,
+            acks:'',
+            batchSize:'',
+            lingerMs:'',
+            partitions:'',
+            replications:''
         }
+
+        this.changeAcks = this.changeAcks.bind(this);
+        this.changeBatchSize = this.changeBatchSize.bind(this);
+        this.changeLingerMs = this.changeLingerMs.bind(this);
+        this.changePartitions = this.changePartitions.bind(this);
+        this.changeRepilications = this.changeRepilications.bind(this);
+        this.updateProperties = this.updateProperties.bind(this);
     }
 
     handleClick = () => {
@@ -16,6 +28,41 @@ class Producer extends Component {
             display: !this.state.display
         })
         // console.log(this.state.display)
+    }
+
+    changeAcks = (event) => {
+        this.setState({
+            acks: event.target.value
+        });
+    }
+
+    changeBatchSize = (event) => {
+        this.setState({
+            batchSize: event.target.value
+        });
+    }
+
+    changeLingerMs = (event) => {
+        this.setState({
+            lingerMs: event.target.value
+        });
+    }
+
+    changePartitions = (event) => {
+        this.setState({
+            partitions: event.target.value
+        });
+    }
+
+    changeRepilications = (event) => {
+        this.setState({
+            replications: event.target.value
+        });
+    }
+
+    updateProperties = (e) => {
+        e.preventDefault();
+        // console.log(this.state.acks + this.state.batchSize);
     }
 
     render() {
@@ -30,19 +77,21 @@ class Producer extends Component {
                         <form action="submit" className='setting_form'>
                             <ul>
                                 <span>Producer Items</span>
-                                <li>acks:<input type="text" /></li>
-                                <li>batch size:<input type="text" />{" "}MB</li>
-                                <li>linger ms:<input type="text" />{" "}ms</li>
+                                <li>acks:<input type="number" name='acks' value={this.state.acks} onChange={this.changeAcks} /></li>
+                                <li>batch size:<input type="number" name='batchSize' value={this.state.batchSize} onChange={this.changeBatchSize} />{" "}MB</li>
+                                <li>linger ms:<input type="number" name='lingerMs' value={this.state.lingerMs} onChange={this.changeLingerMs} />{" "}ms</li>
                                 <span>Topic Items</span>
-                                <li>partitions:<input type="text" /></li>
-                                <li>replications:<input type="text" /></li>
+                                <li>partitions:<input type="number" name='partitions' value={this.state.partitions} onChange={this.changePartitions} /></li>
+                                <li>replications:<input type="number" name='replications' value={this.state.replications} onChange={this.changeRepilications} /></li>
                             </ul>
                             
                             <button className='btn-danger'>Cancel</button>
-                            <button className='btn-success' type='submit'>Submit</button>
+                            <button className='btn-success' type='submit' onClick={this.updateProperties}>Submit</button>
                         </form>
                     </div>
                 </div>
+                <script src=''></script>
+
             </div>
         );
     }
