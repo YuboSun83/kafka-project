@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
+import Animitions from './Animitions';
 import '../css/Producer.css'
 import 'bootstrap/dist/css/bootstrap.css'
 
 class Producer extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             display: false,
-            acks:'',
-            batchSize:'',
-            lingerMs:'',
-            partitions:'',
-            replications:''
+            acks: '',
+            batchSize: '',
+            lingerMs: '',
+            partitions: '',
+            replications: ''
         }
 
         this.changeAcks = this.changeAcks.bind(this);
@@ -62,8 +63,28 @@ class Producer extends Component {
 
     updateProperties = (e) => {
         e.preventDefault();
+        
+        this.handleClick();
+        console.log(e);
         // console.log(this.state.acks + this.state.batchSize);
     }
+
+    cancelProperties = (e) => {
+        e.preventDefault();
+        this.handleClick();
+        // console.log(this.state.acks + this.state.batchSize);
+    }
+
+    // componentDidUpdate(){
+    //     var basicTimeline = anime.timeline();
+    //     basicTimeline
+    //         .add({
+    //             targets:'.ball',
+    //             translateX: [0, "1000px"],
+    //             duration: 500,
+    //             easing: "easeOutSine"
+    //         })
+    // }
 
     render() {
         return (
@@ -71,9 +92,9 @@ class Producer extends Component {
                 <h2 className='title'>Producer</h2>
                 <div className="setting">
                     <div className='set' onClick={this.handleClick}>Setting
-                        <img src="https://img.icons8.com/ios-filled/50/000000/settings.png" alt='' className='setting_icon'/>
+                        <img src="https://img.icons8.com/ios-filled/50/000000/settings.png" alt='' className='setting_icon' />
                     </div>
-                    <div className = {this.state.display? 'showUp' : 'showNone'}>
+                    <div className={this.state.display ? 'showUp' : 'showNone'}>
                         <form action="submit" className='setting_form'>
                             <ul>
                                 <span>Producer Items</span>
@@ -84,13 +105,13 @@ class Producer extends Component {
                                 <li>partitions:<input type="number" name='partitions' value={this.state.partitions} onChange={this.changePartitions} /></li>
                                 <li>replications:<input type="number" name='replications' value={this.state.replications} onChange={this.changeRepilications} /></li>
                             </ul>
-                            
-                            <button className='btn-danger'>Cancel</button>
+
+                            <button className='btn-danger' onClick={this.cancelProperties}>Cancel</button>
                             <button className='btn-success' type='submit' onClick={this.updateProperties}>Submit</button>
                         </form>
                     </div>
                 </div>
-                <script src=''></script>
+                <Animitions />
 
             </div>
         );

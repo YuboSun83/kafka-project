@@ -1,0 +1,73 @@
+.frame{
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+    /* position: relative; */
+}
+
+.ball{
+    width: 35px;
+    height: 35px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 1px;
+    border-radius: 30%;
+}
+
+.ball1{
+    background-color: red;
+}
+
+.ball2{
+    background-color: green;
+}
+
+.ball3{
+    background-color: blue;
+}
+
+.ball4{
+    background-color: pink;
+}
+
+.box{
+    width: 200px;
+    height: 40px;
+    border: 1px black solid;
+    font-size: 16px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.404);
+}
+
+.producer1, .producer2{
+    border-right: 0;
+}
+
+.producers, .topics{
+    float: left;
+}
+
+.consumers{
+    float: right;
+}
+
+.producer2, .consumer2{
+    margin-top: 400px;
+}
+
+.topics{
+    position:absolute;
+    left: 43%;
+}
+
+.topic1{
+    margin-top: 200px;
+    border-left: 0;
+    border-right: 0;
+}
+
+.consumer1, .consumer2{
+    border-left: 0;
+}
