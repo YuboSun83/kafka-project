@@ -9,7 +9,7 @@ class Producer extends Component {
         super(props);
         this.state = {
             display: false,
-            acks: '',
+            acks: 1,
             batchSize: '',
             lingerMs: '',
             partitions: '',
@@ -66,13 +66,13 @@ class Producer extends Component {
         
         this.handleClick();
         console.log(e);
-        // console.log(this.state.acks + this.state.batchSize);
+        console.log(this.state.acks + " " + this.state.batchSize);
     }
 
     cancelProperties = (e) => {
         e.preventDefault();
         this.handleClick();
-        // console.log(this.state.acks + this.state.batchSize);
+        console.log(this.state.acks + this.state.batchSize);
     }
 
     // componentDidUpdate(){
@@ -98,7 +98,14 @@ class Producer extends Component {
                         <form action="submit" className='setting_form'>
                             <ul>
                                 <span>Producer Items</span>
-                                <li>acks:<input type="number" name='acks' value={this.state.acks} onChange={this.changeAcks} /></li>
+                                <li>acks:
+                                    {/* <input type="number" name='acks' value={this.state.acks} onChange={this.changeAcks} /> */}
+                                    <select name="acks" id="acks" value={this.state.acks} onChange={this.changeAcks} >
+                                        <option value="1">1</option>
+                                        <option value="0">0</option>
+                                        <option value="-1">-1 (ALL)</option>
+                                    </select>
+                                </li>
                                 <li>batch size:<input type="number" name='batchSize' value={this.state.batchSize} onChange={this.changeBatchSize} />{" "}MB</li>
                                 <li>linger ms:<input type="number" name='lingerMs' value={this.state.lingerMs} onChange={this.changeLingerMs} />{" "}ms</li>
                                 <span>Topic Items</span>
@@ -111,8 +118,9 @@ class Producer extends Component {
                         </form>
                     </div>
                 </div>
-                <Animitions />
-
+                <div className="anime">
+                    <Animitions state={this.state}/>
+                </div>
             </div>
         );
     }

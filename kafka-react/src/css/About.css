@@ -1,14 +1,14 @@
 .about-list{
     list-style: none;
     font-family: 'Open Sans', sans-serif;
-    font-size: 30px;
+    font-size: 10px;
     text-align: center;
     float: left;
-    margin: 50px;
-    border: 2px solid;
+    margin: 20px;
+    border: 1px solid;
 }
 
 .about-image{
-    width: 400px;
-    height: 400px;;
+    width: 100px;
+    height: 100px;;
 }
