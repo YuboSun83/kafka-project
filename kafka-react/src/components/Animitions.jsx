@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../css/Animition.css';
-// import anime from 'animejs';
+import anime from 'animejs';
 
 class Animitions extends Component {
 
@@ -11,121 +11,121 @@ class Animitions extends Component {
         }
     }
 
-    // componentDidUpdate(){
+    componentDidUpdate(){
 
-    //     console.log(this.props.state.acks)
+        console.log(this.props.state.acks)
 
-    //     var basicTimeline1 = anime.timeline({
-    //         easing:"easeOutSine",
-    //         duration: 500,
-    //         loop: true
-    //     });
-    //     basicTimeline1
-    //         //ball2 green
-    //         .add({
-    //             targets: '.ball2',
-    //             translateX: [0, "160px"],
-    //         })            
-    //         .add({
-    //             targets: '.ball2',
-    //             translateX: ["160px", "480px"],
-    //             translateY: [0, "200px"]
-    //         })
-    //         .add({
-    //             targets: '.ball2',
-    //             translateX: ["480px", "710px"],
-    //         })
-    //         .add({
-    //             targets: '.ball2',
-    //             translateX: ["710px", "1010px"],
-    //             translateY: ["200px", 0]
-    //         })
-    //         .add({
-    //             targets: '.ball2',
-    //             translateX: ["1010px", "1210px"],
-    //         })
-    //         //ball1 red
-    //         .add({
-    //             targets: '.ball1',
-    //             translateX: [0, "200px"],
-    //         })            
-    //         .add({
-    //             targets: '.ball1',
-    //             translateX: ["200px", "520px"],
-    //             translateY: [0, "200px"]
-    //         })
-    //         .add({
-    //             targets: '.ball1',
-    //             translateX: ["520px", "750px"],
-    //         })
-    //         .add({
-    //             targets: '.ball1',
-    //             translateX: ["750px", "1050px"],
-    //             translateY: ["200px", 0]
-    //         })
-    //         .add({
-    //             targets: '.ball1',
-    //             translateX: ["1050px", "1210px"],
-    //         })
+        var basicTimeline1 = anime.timeline({
+            easing:"easeOutSine",
+            duration: 500,
+            loop: true
+        });
+        basicTimeline1
+            //ball2 green
+            .add({
+                targets: '.ball2',
+                translateX: [0, "160px"],
+            })            
+            .add({
+                targets: '.ball2',
+                translateX: ["160px", "480px"],
+                translateY: [0, "200px"]
+            })
+            .add({
+                targets: '.ball2',
+                translateX: ["480px", "710px"],
+            })
+            .add({
+                targets: '.ball2',
+                translateX: ["710px", "1010px"],
+                translateY: ["200px", 0]
+            })
+            .add({
+                targets: '.ball2',
+                translateX: ["1010px", "1210px"],
+            })
+            //ball1 red
+            .add({
+                targets: '.ball1',
+                translateX: [0, "200px"],
+            })            
+            .add({
+                targets: '.ball1',
+                translateX: ["200px", "520px"],
+                translateY: [0, "200px"]
+            })
+            .add({
+                targets: '.ball1',
+                translateX: ["520px", "750px"],
+            })
+            .add({
+                targets: '.ball1',
+                translateX: ["750px", "1050px"],
+                translateY: ["200px", 0]
+            })
+            .add({
+                targets: '.ball1',
+                translateX: ["1050px", "1210px"],
+            })
             
         
-    //     setTimeout(() => {
-    //         var basicTimeline2 = anime.timeline({
-    //             easing:"easeOutSine",
-    //             duration: 400,
-    //             loop: true
-    //         });
-    //         basicTimeline2
-    //             //ball4 pink
-    //             .add({
-    //                 targets: '.ball4',
-    //                 translateX: [0, "160px"],
-    //             })            
-    //             .add({
-    //                 targets: '.ball4',
-    //                 translateX: ["160px", "480px"],
-    //                 translateY: [0, "-240px"]
-    //             })
-    //             .add({
-    //                 targets: '.ball4',
-    //                 translateX: ["480px", "710px"],
-    //             })
-    //             .add({
-    //                 targets: '.ball4',
-    //                 translateX: ["710px", "1010px"],
-    //                 translateY: ["-240px", 0]
-    //             })
-    //             .add({
-    //                 targets: '.ball4',
-    //                 translateX: ["1010px", "1210px"],
-    //             })
+        setTimeout(() => {
+            var basicTimeline2 = anime.timeline({
+                easing:"easeOutSine",
+                duration: 400,
+                loop: true
+            });
+            basicTimeline2
+                //ball4 pink
+                .add({
+                    targets: '.ball4',
+                    translateX: [0, "160px"],
+                })            
+                .add({
+                    targets: '.ball4',
+                    translateX: ["160px", "480px"],
+                    translateY: [0, "-240px"]
+                })
+                .add({
+                    targets: '.ball4',
+                    translateX: ["480px", "710px"],
+                })
+                .add({
+                    targets: '.ball4',
+                    translateX: ["710px", "1010px"],
+                    translateY: ["-240px", 0]
+                })
+                .add({
+                    targets: '.ball4',
+                    translateX: ["1010px", "1210px"],
+                })
 
-    //             //ball3 blue
-    //             .add({
-    //                 targets: '.ball3',
-    //                 translateX: [0, "200px"],
-    //             })            
-    //             .add({
-    //                 targets: '.ball3',
-    //                 translateX: ["200px", "520px"],
-    //                 translateY: [0, "-240px"]
-    //             })
-    //             .add({
-    //                 targets: '.ball3',
-    //                 translateX: ["520px", "750px"],
-    //             })
-    //             .add({
-    //                 targets: '.ball3',
-    //                 translateX: ["750px", "1050px"],
-    //                 translateY: ["-240px", 0]
-    //             })
-    //             .add({
-    //                 targets: '.ball3',
-    //                 translateX: ["1050px", "1210px"],
-    //             })
-    //     }, 400);
+                //ball3 blue
+                .add({
+                    targets: '.ball3',
+                    translateX: [0, "200px"],
+                })            
+                .add({
+                    targets: '.ball3',
+                    translateX: ["200px", "520px"],
+                    translateY: [0, "-240px"]
+                })
+                .add({
+                    targets: '.ball3',
+                    translateX: ["520px", "750px"],
+                })
+                .add({
+                    targets: '.ball3',
+                    translateX: ["750px", "1050px"],
+                    translateY: ["-240px", 0]
+                })
+                .add({
+                    targets: '.ball3',
+                    translateX: ["1050px", "1210px"],
+                })
+        }, 400);
         
-    // }
+    }
 
     render() {    
         return (
